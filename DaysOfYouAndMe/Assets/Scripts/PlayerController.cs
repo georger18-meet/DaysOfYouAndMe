@@ -16,10 +16,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _groundDistance = 0.4f;
     [SerializeField] private LayerMask _groundMask;
 
+    [Header("Locks")]
+    [SerializeField] private NoteUI _noteUI;                 // UIManager (NoteUI)
+    [SerializeField] private ExamineManager _examineManager; // ExamineManager
+
     private Vector3 _velocity;
     private bool _isGrounded;
 
-    // Expose these for HeadBob if you want (optional)
     public bool IsGrounded => _isGrounded;
     public Vector3 HorizontalVelocity
     {
@@ -39,6 +42,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GroundCheck();
+
+        bool lockedByNote = (_noteUI != null && _noteUI.IsOpen);
+        bool lockedByExamine = (_examineManager != null && _examineManager.IsExamining());
+
+        // Lock movement during note reading OR examining
+        if (lockedByNote || lockedByExamine)
+        {
+            // Stop horizontal movement input
+            _charCon.Move(Vector3.zero);
+
+            // Still apply gravity so you don't hang mid-air
+            Gravity();
+            return;
+        }
+
         Movement();
         Gravity();
     }
@@ -47,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         _isGrounded = Physics.CheckSphere(_groundCheck.position, _groundDistance, _groundMask);
         if (_isGrounded && _velocity.y < 0f)
-            _velocity.y = -2f; // keeps you “stuck” to ground
+            _velocity.y = -2f;
     }
 
     private void Movement()
