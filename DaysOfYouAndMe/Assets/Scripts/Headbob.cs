@@ -5,10 +5,6 @@ public class HeadBob : MonoBehaviour
     [Header("Refs")]
     [SerializeField] private CharacterController controller;
 
-    [Header("UI / Examine Locks")]
-    [SerializeField] private NoteUI noteUI;                 // drag UIManager (NoteUI)
-    [SerializeField] private ExamineManager examineManager; // drag your ExamineManager
-
     [Header("Ground Check (match PlayerController)")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
@@ -35,22 +31,13 @@ public class HeadBob : MonoBehaviour
     {
         if (!controller || !groundCheck) return;
 
-        // STOP headbob while reading a note OR examining an object
-        bool lockedByNote = (noteUI != null && noteUI.IsOpen);
-        bool lockedByExamine = (examineManager != null && examineManager.IsExamining());
-
-        if (lockedByNote || lockedByExamine)
-        {
-            t = 0f;
-            transform.localPosition = Vector3.Lerp(transform.localPosition, startLocalPos, returnSpeed * Time.deltaTime);
-            return;
-        }
-
         bool grounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputZ = Input.GetAxisRaw("Vertical");
         float speed = new Vector2(inputX, inputZ).magnitude;
+
+
 
         bool shouldBob = forceBobAlways || (grounded && speed > 0.1f);
 
