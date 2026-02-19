@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 967990bf1ecb5b1478fd21c6c265987d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Managers/NoteUIManager.prefab
+  uploadId: 665900

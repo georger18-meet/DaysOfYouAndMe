@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 403deba15fcc5b543b69150fdbb5c425
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Materials/M_Transparent_Trigger.mat
+  uploadId: 665900

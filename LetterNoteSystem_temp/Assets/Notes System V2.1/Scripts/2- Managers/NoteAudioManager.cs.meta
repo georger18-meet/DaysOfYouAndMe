@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1a315b30bfe142140802aee7496ef4a0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Scripts/2- Managers/NoteAudioManager.cs
+  uploadId: 665900

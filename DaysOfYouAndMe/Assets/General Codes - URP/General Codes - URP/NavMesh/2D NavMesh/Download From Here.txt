@@ -1,0 +1,6 @@
+https://github.com/h8man/NavMeshPlus
+
+Add Package form git URL
+Go to Package Manager click + and then select Add Package form git URL paste url:
+
+https://github.com/h8man/NavMeshPlus.git

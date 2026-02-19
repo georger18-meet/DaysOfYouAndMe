@@ -6,6 +6,9 @@ public class NoteInteractor : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private NoteUI noteUI;
 
+    [Header("Locks (optional but recommended)")]
+    [SerializeField] private ExamineManager examineManager; // so E doesn't open notes while examining
+
     [Header("Interaction Settings")]
     [SerializeField] private float interactDistance = 3f;
     [SerializeField] private LayerMask interactMask;
@@ -13,7 +16,6 @@ public class NoteInteractor : MonoBehaviour
     [Header("Input")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private KeyCode closeKey = KeyCode.Escape;
-
 
     void Start()
     {
@@ -24,18 +26,19 @@ public class NoteInteractor : MonoBehaviour
     void Update()
     {
         if (cam == null || noteUI == null)
+            return; 
+
+        // If examining, don't allow note interaction
+        if (examineManager != null && examineManager.IsExamining())
             return;
 
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
 
-        // ALWAYS draw debug ray in Scene view
+        // Raycast to find a note
         bool hitSomething = Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactMask);
 
-        if (hitSomething)
-            Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.green);
-        else
-            Debug.DrawRay(ray.origin, ray.direction * interactDistance, Color.red);
-
+        // Debug ray
+        Debug.DrawRay(ray.origin, ray.direction * interactDistance, hitSomething ? Color.green : Color.red);
 
         // CLOSE NOTE
         if (noteUI.IsOpen)
@@ -47,7 +50,6 @@ public class NoteInteractor : MonoBehaviour
             return;
         }
 
-
         // OPEN NOTE
         if (Input.GetKeyDown(interactKey) && hitSomething)
         {
@@ -55,12 +57,9 @@ public class NoteInteractor : MonoBehaviour
 
             if (item != null && item.noteSprite != null)
             {
-                noteUI.Open(item);
+                noteUI.Open(item, item.gameObject); // <-- IMPORTANT
             }
         }
-
-      
-
 
     }
 }

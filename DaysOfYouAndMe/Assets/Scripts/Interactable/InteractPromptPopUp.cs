@@ -30,14 +30,18 @@ public class InteractPromptPopUp : MonoBehaviour
 
     private float targetAlpha = 0f;
 
+    // External suppression (InspectSpot uses this)
+    private bool suppressed = false;
+
     void Start()
     {
         cam = Camera.main != null ? Camera.main.transform : null;
 
         if (promptPrefab != null)
         {
+            // IMPORTANT: instantiate UNPARENTED (prevents inheriting interactable scale/rotation)
             promptInstance = Instantiate(promptPrefab);
-            promptInstance.SetActive(true); // keep active so we can fade smoothly
+            promptInstance.SetActive(true);
 
             tmp = promptInstance.GetComponentInChildren<TMP_Text>();
             if (tmp != null) tmp.text = promptText;
@@ -45,12 +49,22 @@ public class InteractPromptPopUp : MonoBehaviour
             canvasGroup = promptInstance.GetComponentInChildren<CanvasGroup>();
             if (canvasGroup != null)
                 canvasGroup.alpha = 0f; // start hidden
+
+            // Keep a stable world scale (in case prefab was modified elsewhere)
+            promptInstance.transform.localScale = Vector3.one;
         }
     }
 
     void Update()
     {
         if (promptInstance == null || cam == null) return;
+
+        // If suppressed, force hidden (and keep it hidden)
+        if (suppressed)
+        {
+            ForceHideImmediate();
+            return;
+        }
 
         // Hide prompt while note is open / examining (optional)
         bool lockedByNote = (noteUI != null && noteUI.IsOpen);
@@ -68,14 +82,13 @@ public class InteractPromptPopUp : MonoBehaviour
         // Set target alpha
         targetAlpha = shouldShow ? 1f : 0f;
 
-        // Position prompt
+        // Position prompt in world space (stable)
         promptInstance.transform.position = transform.position + worldOffset;
 
-        // Face camera
+        // Billboard: match camera facing (stable, no flips)
         if (faceCamera)
         {
-            Vector3 lookDir = promptInstance.transform.position - cam.position;
-            promptInstance.transform.rotation = Quaternion.LookRotation(lookDir);
+            promptInstance.transform.forward = cam.forward;
         }
 
         Fade();
@@ -90,6 +103,31 @@ public class InteractPromptPopUp : MonoBehaviour
             targetAlpha,
             fadeSpeed * Time.deltaTime
         );
+    }
+
+    // Called by InspectSpot
+    public void SetSuppressed(bool value)
+    {
+        suppressed = value;
+
+        if (suppressed)
+            ForceHideImmediate();
+        else
+        {
+            // allow it to show again (fade logic will handle alpha)
+            if (promptInstance != null)
+                promptInstance.SetActive(true);
+        }
+    }
+
+    private void ForceHideImmediate()
+    {
+        if (promptInstance == null) return;
+
+        if (canvasGroup != null)
+            canvasGroup.alpha = 0f;
+
+        promptInstance.SetActive(false);
     }
 
     void OnDestroy()

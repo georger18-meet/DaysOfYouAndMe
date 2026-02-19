@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b559b310b649a1459f1f8013b9f5481
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Demo Prefabs/FPSController.prefab
+  uploadId: 665900

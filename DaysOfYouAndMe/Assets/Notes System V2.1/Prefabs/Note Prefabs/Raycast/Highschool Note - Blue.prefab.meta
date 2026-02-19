@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c88f87e7d8674fa44a10b1b8eb9bfad8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Note Prefabs/Raycast/Highschool Note
+    - Blue.prefab
+  uploadId: 665900

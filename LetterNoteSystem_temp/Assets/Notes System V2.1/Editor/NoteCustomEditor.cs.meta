@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 081f5e8120d16eb40ab3b545eb89c31b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Editor/NoteCustomEditor.cs
+  uploadId: 665900

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 83c81407209f85e4c87c0cda8b32868e
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Additional Packages/FPSController/FirstPersonCharacter/Scripts/HeadBob.cs
+  uploadId: 665900

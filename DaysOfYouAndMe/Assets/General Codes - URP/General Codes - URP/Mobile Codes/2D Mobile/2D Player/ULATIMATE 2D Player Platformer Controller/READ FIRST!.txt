@@ -1,0 +1,5 @@
+To make this 2D controller work fully, set up the following layers:
+
+  7    Player
+  8    Climbable   
+  9     Ladders    

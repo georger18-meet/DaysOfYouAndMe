@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3b5a25aba7683f14ca96c433d55559e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Additional Packages/3DText/3DText_Cull_Yellow.mat
+  uploadId: 665900

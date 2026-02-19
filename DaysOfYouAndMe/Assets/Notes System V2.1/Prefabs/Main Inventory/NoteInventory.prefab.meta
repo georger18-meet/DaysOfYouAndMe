@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d7c0987fbe7149844a85a643548c6ead
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Main Inventory/NoteInventory.prefab
+  uploadId: 665900

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: db2251db6638c1e478571aabc4317d5b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/ScriptableObjects/Sounds/SO_PaperFlipOpen.asset
+  uploadId: 665900

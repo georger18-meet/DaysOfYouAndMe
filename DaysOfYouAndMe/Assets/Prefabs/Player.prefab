@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4767539003276993263}
   - component: {fileID: 8287775292218066556}
   - component: {fileID: 3555416896084581963}
-  - component: {fileID: 554778869316553236}
+  - component: {fileID: 1872323774429119148}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd17d8b902f0473459fbc0df109c6f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  _mouseSensitivity: 120
+  _mouseSensitivity: 80
   _player: {fileID: 1477746960419217426}
   _examineManager: {fileID: 0}
   _noteUI: {fileID: 0}
@@ -178,11 +178,11 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  frequency: 9
-  amplitude: 0.06
-  returnSpeed: 14
+  frequency: 4
+  amplitude: 0.08
+  returnSpeed: 3
   forceBobAlways: 0
---- !u!114 &554778869316553236
+--- !u!114 &1872323774429119148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,17 +191,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 925794589604909405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41237bdf1853f9441ab7b36029e7e9ae, type: 3}
+  m_Script: {fileID: 11500000, guid: e56c5f4fe193ec2469e9fd06984b5b40, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoteInteractor
-  cam: {fileID: 5106090991011459276}
-  noteUI: {fileID: 0}
-  interactDistance: 3
-  interactMask:
-    serializedVersion: 2
-    m_Bits: 128
-  interactKey: 101
-  closeKey: 27
+  m_EditorClassIdentifier: Assembly-CSharp::NoteSystem.NotesInteractor
+  rayLength: 5
 --- !u!1 &928026994226031972
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +695,7 @@ MonoBehaviour:
     m_Bits: 8
   _noteUI: {fileID: 0}
   _examineManager: {fileID: 0}
+  _dissolveKey: 99
 --- !u!1 &8123927861041627545
 GameObject:
   m_ObjectHideFlags: 0

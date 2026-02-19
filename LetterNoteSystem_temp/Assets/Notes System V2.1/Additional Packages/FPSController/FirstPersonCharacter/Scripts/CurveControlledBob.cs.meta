@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 492f54f4accf00440828ffcb9e4fcc19
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Additional Packages/FPSController/FirstPersonCharacter/Scripts/CurveControlledBob.cs
+  uploadId: 665900

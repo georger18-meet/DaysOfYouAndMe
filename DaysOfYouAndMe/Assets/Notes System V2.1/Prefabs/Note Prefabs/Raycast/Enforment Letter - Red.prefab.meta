@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ecf3d667f28a7fa4ea0608cb0713abc3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Note Prefabs/Raycast/Enforment Letter
+    - Red.prefab
+  uploadId: 665900

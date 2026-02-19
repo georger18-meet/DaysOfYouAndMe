@@ -35,7 +35,7 @@ public class HeadBob : MonoBehaviour
     {
         if (!controller || !groundCheck) return;
 
-        // STOP headbob while reading a note OR examining an object
+        // STOP headbob while reading a note OR examining OR journal open
         bool lockedByNote = (noteUI != null && noteUI.IsOpen);
         bool lockedByExamine = (examineManager != null && examineManager.IsExamining());
 

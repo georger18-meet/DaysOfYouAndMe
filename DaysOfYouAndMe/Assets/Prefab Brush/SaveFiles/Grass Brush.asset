@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cb495ffbca0404d878640680165899, type: 3}
+  m_Name: Grass Brush
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::ArchieAndrews.PrefabBrush.PB_SaveObject
+  prefabList: []
+  prefabData:
+  - prefab: {fileID: 2154632172392603656, guid: d29b03ad9d9ce1547a7077dd6388c0bf, type: 3}
+    selected: 1
+  paintType: 0
+  brushSize: 3.1
+  minBrushSize: 0.1
+  maxBrushSize: 50
+  paintDeltaDistance: 0.209
+  maxPaintDeltaDistance: 3
+  minPaintDeltaDistance: 0.1
+  prefabsPerStroke: 4
+  maxprefabsPerStroke: 20
+  minprefabsPerStroke: 1
+  spawnHeight: 10
+  addRigidbodyToPaintedPrefab: 1
+  physicsIterations: 100
+  checkLayer: 0
+  checkTag: 0
+  checkSlope: 0
+  checkTerrainLayer: 0
+  ignorePaintedPrefabs: 0
+  ignoreTriggers: 1
+  ignoreTriggersErase: 1
+  ignorePaintedPrefabsErase: 0
+  includeInactivePrefabsInCheck: 0
+  includeInactivePrefabsInCheckErase: 0
+  chainPivotAxis: 0
+  chainDirection: 0
+  requiredTagMask: -1
+  requiredLayerMask: -1
+  minRequiredSlope: 7.019497
+  maxRequiredSlope: 48.133694
+  applyOriginOffset: 1
+  applyRotationOffset: 1
+  prefabOriginOffset: {x: 0, y: 0, z: 0}
+  prefabRotationOffset: {x: 0, y: 0, z: 0}
+  draggingAction: 1
+  rotationAxis: 0
+  rotationSensitivity: 10
+  applyParent: 1
+  parentingStyle: 1
+  parent: {fileID: 0}
+  rotateToMatchSurface: 1
+  rotateSurfaceDirection: 0
+  randomizeRotation: 1
+  minXRotation: 0
+  maxXRotation: 0
+  minYRotation: 0
+  maxYRotation: 360
+  minZRotation: 0
+  maxZRotation: 0
+  applyScale: 1
+  scaleType: 1
+  scaleApplicationType: 0
+  minScale: 1
+  maxScale: 1
+  minXScale: 0.8
+  maxXScale: 3
+  minYScale: 0.8
+  maxYScale: 3
+  minZScale: 0.8
+  maxZScale: 3
+  parentList: []
+  eraseBrushSize: 7.96
+  minEraseBrushSize: 0.1
+  maxEraseBrushSize: 20
+  eraseType: 0
+  checkLayerForErase: 1
+  checkTagForErase: 1
+  checkSlopeForErase: 1
+  checkTerrainLayerForErase: 1
+  mustBeSelectedInBrush: 0
+  requiredTagMaskForErase: 0
+  requiredLayerMaskForErase: 0
+  eraseTagCheckType: 0
+  minRequiredSlopeForErase: 0
+  maxRequiredSlopeForErase: 0
+  terrainLayers:
+  - terrainLayer: {fileID: 0}
+    minLayerStrength: 1
+  eraseLayerCheckType: 0
+  terrainLayersErase: []
+  eraseDetection: 0
+  paintBrushHotKey: 112
+  paintBrushHoldKey: 0
+  removeBrushHotKey: 306
+  removeBrushHoldKey: 1
+  disableBrushHotKey: 105
+  disableBrushHoldKey: 0
+  filterFlags: 0
+  eraseFilterFlags: -1
+  modFlags: -1

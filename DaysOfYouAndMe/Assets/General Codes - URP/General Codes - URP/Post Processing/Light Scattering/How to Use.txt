@@ -1,0 +1,25 @@
+In your unity project, scroll down the Project assets area and find the Packages
+
+Right click - show in explorer
+
+Enter the Packages folder on your computer
+
+Copy-Paste this zipped file into the Packages folder
+
+Extract it
+
+Delete the zip file
+
+After unity loads the new package, go to the Settings folder, and in your Renderer file (mobile or pc or whatever) - click on it, see in the inspector Add Render Feature button
+
+click the Add Render Feature button and add the Light Scattering Render Feature
+
+Now choose your RP Asset (mobile or pc or whatever) and click V for Depth Texture
+
+Now go to your Global Volume, add an Override, and add this:
+
+OccaSoftware --> Light Scatteing
+
+This only works if you have a directional light in the scene
+
+Add Fog Density, change its color to differ from the Distant Fog in Unity's Light Settings and remember it works alongside your Directional Light's angle

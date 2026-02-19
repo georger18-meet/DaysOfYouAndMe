@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db1687b5cebe0d849a25d91dc982cbe1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159907
+  packageName: Letter & Note System
+  packageVersion: 2.0
+  assetPath: Assets/Notes System V2.1/Prefabs/Managers/NoteController.prefab
+  uploadId: 665900
